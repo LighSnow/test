@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "gulp-autoprefixer": "^7.0.0",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "vivus": "^0.4.5"
   }
 }
