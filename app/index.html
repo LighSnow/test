@@ -24,18 +24,18 @@
 			</aside>
 
 			<!-- Form -->
-			<form class="form" action="">
+			<form class="form" id="form">
 				<div class="form__inner">
 					<h3 class="form__title">New user?</h3>
 					<p class="form__subtitle">Use the form below to create your account.</p>
 					<div class="form__row">
 						<div class="form__row-inner">
-							<label class="form__label" for="first-name">First Name</label>
-							<input class="form__input" type="text" name="first-name" placeholder="Alice">
+							<label class="form__label" for="firstname">First Name</label>
+							<input class="form__input" type="text" name="firstname" placeholder="Alice">
 						</div>
 						<div class="form__row-inner">
-							<label class="form__label" for="last-name">Last Name</label>
-							<input class="form__input" type="text" name="last-name" placeholder="Miller">
+							<label class="form__label" for="lastname">Last Name</label>
+							<input class="form__input" type="text" name="lastname" placeholder="Miller">
 						</div>
 					</div>
 
@@ -43,11 +43,17 @@
 					<div class="form__row">
 						<div class="form__row-inner">
 							<label class="form__label" for="nationality">Nationality</label>
-							<input class="form__input" type="text" name="nationality" placeholder="American">
+							<div class="form__select">
+								<select>
+									<option value="american">American</option>
+									<option value="belarusian">Belarusian</option>
+									<option value="russian">Russian</option>
+								</select>
+							</div>
 						</div>
 						<div class="form__row-inner">
 							<label class="form__label" for="email">E-mail</label>
-							<input class="form__input" type="text" name="email" placeholder="alice.miller@yahoo.com">
+							<input class="form__input" name="email" placeholder="alice.miller@yahoo.com" type="email">
 						</div>
 					</div>
 
@@ -57,23 +63,23 @@
 							<div class="form__row">
 								<div class="form__select date">
 									<select>
-										<option value="1">21</option>
-										<option value="2">22</option>
-										<option value="3">23</option>
+										<option value="21">21</option>
+										<option value="22">22</option>
+										<option value="23">23</option>
 									</select>
 								</div>
 								<div class="form__select month">
 									<select>
-										<option value="1">December</option>
-										<option value="2">Octomber</option>
-										<option value="3">November</option>
+										<option value="december">December</option>
+										<option value="octomber">Octomber</option>
+										<option value="november">November</option>
 									</select>
 								</div>
 								<div class="form__select year">
 									<select>
-										<option value="1">1995</option>
-										<option value="2">1994</option>
-										<option value="3">1993</option>
+										<option value="1995">1995</option>
+										<option value="1994">1994</option>
+										<option value="1993">1993</option>
 									</select>
 								</div>
 							</div>
@@ -101,13 +107,13 @@
 							<input class="form__input" type="password" name="password">
 						</div>
 						<div class="form__row-inner">
-							<label class="form__label" for="confirm-password">Confirm Password</label>
-							<input class="form__input" type="password" name="confirm-password">
+							<label class="form__label" for="confirm_password">Confirm Password</label>
+							<input class="form__input" type="password" name="confirm_password">
 						</div>
 					</div>
 				</div>
 
-				
+
 				<!-- SVG Background -->
 				<object id="shape" type="image/svg+xml" data="images/shape.svg"></object>
 

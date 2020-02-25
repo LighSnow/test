@@ -20,6 +20,7 @@ h6,
 p {
 	margin: 0;
 	padding: 0;
+	text-overflow: ellipsis;
 }
 
 input,
@@ -127,12 +128,15 @@ select {
 		margin-bottom: 13px;
 
 		&-inner {
+			position: relative;
+
 			max-width: 235px;
 			width: 100%;
 
 			&:first-child {
 				margin-right: 14px;
 			}
+
 		}
 
 		&:nth-child(2) {
@@ -160,6 +164,19 @@ select {
 		border: none;
 		border-bottom: 1px solid #F2F2F2;
 		background-color: transparent;
+		text-overflow: ellipsis;
+
+		&::placeholder {
+			color: #111111;
+		}
+
+		&.error {
+			border-color: #FF2222;
+
+			&::placeholder {
+				color: #FF2222;
+			}
+		}
 	}
 
 	&__select {
@@ -257,6 +274,8 @@ select {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
+		z-index: 1;
 
 		font-size: 13px;
 	}
@@ -274,12 +293,32 @@ select {
 
 		background: #5A61ED;
 		border: none;
+		cursor: pointer;
 	}
 }
+
+
 
 #shape {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	z-index: 0;
+}
+
+
+#firstname-error,
+#lastname-error,
+#email-error,
+#password-error,
+#confirm_password-error {
+	position: absolute;
+	right: 0;
+	bottom: -12px;
+	z-index: -1;
+
+	font-size: 10px;
+	color: red;
+
+
 }
