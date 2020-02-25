@@ -28,7 +28,7 @@ $(function () {
 			confirm_password: {
 				required: true,
 				minlength: 8,
-				equalTo: "password"
+				equalTo: "#password"
 			}
 		},
 		messages: {
@@ -54,5 +54,21 @@ $(function () {
 			}
 		}
 	});
+
+
+// 	$('#form').on('submit', function(){
+
+// 		let data = $(this).serialize();
+
+// 		$.ajax({
+// 				method: 'POST',
+// 				url: 'submit.php',
+// 				data: data
+// 		}).done(function( msg ){
+// 				console.log( msg );
+// 		});
+
+// 		return false;
+// });
 
 });

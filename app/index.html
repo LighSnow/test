@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans|Work+Sans:300,400,500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -24,16 +25,16 @@
 			</aside>
 
 			<!-- Form -->
-			<form class="form" id="form">
+			<form id="form" class="form" method="POST">
 				<div class="form__inner">
 					<h3 class="form__title">New user?</h3>
 					<p class="form__subtitle">Use the form below to create your account.</p>
-					<div class="form__row">
-						<div class="form__row-inner">
+					<div class="form__row ">
+						<div class="form__row-inner animated fadeInUp fadeInUp--1">
 							<label class="form__label" for="firstname">First Name</label>
 							<input class="form__input" type="text" name="firstname" placeholder="Alice">
 						</div>
-						<div class="form__row-inner">
+						<div class="form__row-inner animated fadeInUp fadeInUp--2">
 							<label class="form__label" for="lastname">Last Name</label>
 							<input class="form__input" type="text" name="lastname" placeholder="Miller">
 						</div>
@@ -41,7 +42,7 @@
 
 
 					<div class="form__row">
-						<div class="form__row-inner">
+						<div class="form__row-inner animated fadeInUp fadeInUp--3">
 							<label class="form__label" for="nationality">Nationality</label>
 							<div class="form__select">
 								<select>
@@ -51,14 +52,14 @@
 								</select>
 							</div>
 						</div>
-						<div class="form__row-inner">
+						<div class="form__row-inner animated fadeInUp fadeInUp--4">
 							<label class="form__label" for="email">E-mail</label>
 							<input class="form__input" name="email" placeholder="alice.miller@yahoo.com" type="email">
 						</div>
 					</div>
 
-					<div class="form__row">
-						<div class="form__row-inner">
+					<div class="form__row ">
+						<div class="form__row-inner animated fadeInUp fadeInUp--5">
 							<label class="form__label" for="">Date of Birth</label>
 							<div class="form__row">
 								<div class="form__select date">
@@ -86,10 +87,10 @@
 						</div>
 
 
-						<div class="form__row-inner">
+						<div class="form__row-inner animated fadeInUp fadeInUp--6">
 							<label class="form__label" for="gender">Gender
 							</label>
-							<div class="form__row">
+							<div class="form__row ">
 								<label class="form__radio">Male
 									<input class="radio" type="radio" name="radio" checked>
 									<span></span>
@@ -101,12 +102,12 @@
 							</div>
 						</div>
 					</div>
-					<div class="form__row">
-						<div class="form__row-inner">
+					<div class="form__row ">
+						<div class="form__row-inner animated fadeInUp fadeInUp--7">
 							<label class="form__label" for="password">Password</label>
-							<input class="form__input" type="password" name="password">
+							<input class="form__input" type="password" name="password" id="password">
 						</div>
-						<div class="form__row-inner">
+						<div class="form__row-inner animated fadeInUp fadeInUp--8">
 							<label class="form__label" for="confirm_password">Confirm Password</label>
 							<input class="form__input" type="password" name="confirm_password">
 						</div>
@@ -118,7 +119,7 @@
 				<object id="shape" type="image/svg+xml" data="images/shape.svg"></object>
 
 				<!-- Buttons -->
-				<div class="form__buttons">
+				<div class="form__buttons animated fadeInUp fadeInUp--9">
 					<div class="account">
 						Have an account?
 						<a href="#">Login</a>
