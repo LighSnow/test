@@ -1,0 +1,72 @@
+@media (max-width: 850px) {
+
+	.wrapper {
+		align-items: flex-start;
+		min-height: 650px;
+	}
+
+	.container {
+		max-width: 528px;
+		min-height: 650px;
+
+		flex-direction: column;
+	}
+
+	.aside {
+		height: 100px;
+		width: 100%;
+	}
+
+	.aside__text {
+		bottom: 0;
+		left: 10px;
+
+
+		font-size: 36px;
+
+		transform: none;
+	}
+
+	.form {
+		padding: 10px;
+
+	}
+
+	.form__row {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+
+	.form__row-inner {
+		max-width: 100%;
+		margin-bottom: 10px;
+
+		.form__row {
+			flex-direction: row;
+		}
+	}
+
+	.form__row-inner:first-child {
+		margin-right: 0;
+	}
+
+	.form__buttons {
+		bottom: 15px;
+		left: 10px;
+		right: 10px;
+	}
+
+	.form__select {
+
+		&.date,
+		&.month,
+		&.year {
+			width: 33%;
+		}
+	}
+
+	.form__btn {
+		min-width: 140px;
+	}
+
+}
