@@ -90,6 +90,7 @@ $(function () {
 					console.log(data);
 					$('.form__inner').hide();
 					$('.form__btn').hide();
+					$('.thanks').show();
 				}
 			});
 			return false;

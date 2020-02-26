@@ -273,12 +273,32 @@ select {
 
 	&__buttons {
 		display: flex;
-		justify-content: space-between;
+		justify-content: flex-end;
 		align-items: center;
-		position: relative;
+
+		position: absolute;
+		bottom: 36px;
+		left: 22px;
+		right: 22px;
 		z-index: 1;
 
 		font-size: 13px;
+
+		.account {
+			position: absolute;
+			left: 0;
+			bottom: 8px;
+
+			font-weight: 300;
+			font-size: 13px;
+			line-height: 15px;
+			color: #000000;
+
+			.login {
+				font-weight: 500;
+				color: #5A61ED;
+			}
+		}
 	}
 
 	&__btn {
@@ -295,6 +315,32 @@ select {
 		background: #5A61ED;
 		border: none;
 		cursor: pointer;
+	}
+}
+
+/* Thanks
+================================ */
+
+.thanks {
+	display: none;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 64px;
+
+	transform: translateY(-50%);
+
+	&__title {
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 42px;
+		letter-spacing: -0.46px;
+	}
+
+	&__subtitle {
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 16px;
 	}
 }
 
@@ -325,6 +371,7 @@ select {
 
 
 }
+
 /* Animation input
 ================================ */
 .fadeInUp--1 {
@@ -371,3 +418,15 @@ select {
 	animation-duration: 1s;
 	animation-delay: 5s;
 }
+
+
+input:required:valid {
+	border-color: green;
+}
+
+
+
+/* Media
+================================ */
+
+@import 'media';
