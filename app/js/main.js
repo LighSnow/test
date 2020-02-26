@@ -1,4 +1,7 @@
 $(function () {
+
+
+
 	const shapeIcon = new Vivus(
 		'shape', {
 			type: 'oneByOne',
@@ -6,6 +9,31 @@ $(function () {
 			reverseStack: true
 		}
 	);
+	// $('#form').submit(function (e) {
+	// 	e.preventDefault();
+	// 	if (document.form.firstname.value == '' || document.form.email.value == '') {
+
+	// 		valid = false;
+	// 		return valid;
+	// 	}
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "submit.php",
+	// 		data: $(this).serialize(),
+	// 		success: function () {
+	// 			$('.form__inner').hide();
+	// 			$(this).find('input').val('');
+	// 			$('#form').trigger('reset');
+	// 		}
+	// 	})
+	// });
+
+
+
+	$('.form__btn').click(function () {
+		$(this).effect("shake");
+	});
+
 
 	$("#form").validate({
 		rules: {
@@ -52,23 +80,25 @@ $(function () {
 				minlength: "Please enter at least 8 characters",
 				equalTo: "Please enter the same password as above"
 			}
+		},
+		submitHandler: function (form) {
+			$.ajax({
+				type: "POST",
+				url: "submit.php",
+				data: $(form).serialize(),
+				success: function (data) {
+					console.log(data);
+					$('.form__inner').hide();
+					$('.form__btn').hide();
+				}
+			});
+			return false;
 		}
 	});
 
 
-// 	$('#form').on('submit', function(){
 
-// 		let data = $(this).serialize();
 
-// 		$.ajax({
-// 				method: 'POST',
-// 				url: 'submit.php',
-// 				data: data
-// 		}).done(function( msg ){
-// 				console.log( msg );
-// 		});
 
-// 		return false;
-// });
 
 });
