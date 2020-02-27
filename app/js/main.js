@@ -1,40 +1,7 @@
 $(function () {
 
-
-
-	const shapeIcon = new Vivus(
-		'shape', {
-			type: 'oneByOne',
-			duration: 500,
-			reverseStack: true
-		}
-	);
-	// $('#form').submit(function (e) {
-	// 	e.preventDefault();
-	// 	if (document.form.firstname.value == '' || document.form.email.value == '') {
-
-	// 		valid = false;
-	// 		return valid;
-	// 	}
-	// 	$.ajax({
-	// 		type: "POST",
-	// 		url: "submit.php",
-	// 		data: $(this).serialize(),
-	// 		success: function () {
-	// 			$('.form__inner').hide();
-	// 			$(this).find('input').val('');
-	// 			$('#form').trigger('reset');
-	// 		}
-	// 	})
-	// });
-
-
-
-	$('.form__btn').click(function () {
-		$(this).effect("shake");
-	});
-
-
+	/* Validation
+	================================= */
 	$("#form").validate({
 		rules: {
 			firstname: {
@@ -89,7 +56,7 @@ $(function () {
 				success: function (data) {
 					console.log(data);
 					$('.form__inner').hide();
-					$('.form__btn').hide();
+					$(".form__btn").hide()
 					$('.thanks').show();
 				}
 			});
@@ -97,9 +64,24 @@ $(function () {
 		}
 	});
 
+	/* Vivus
+	================================= */
+	const shapeIcon = new Vivus(
+		'shape', {
+			type: 'oneByOne',
+			duration: 500,
+			reverseStack: true
+		}
+	);
 
+	/* Button animation
+	================================= */
+	$(".form__btn").on("click", function () {
+		$(this).addClass("shake");
 
-
-
+		let delay = setTimeout(function () {
+			$(".shake").removeClass("shake");
+		}, 500)
+	});
 
 });

@@ -26,6 +26,7 @@
     "gulp-autoprefixer": "^7.0.0",
     "jquery-validation": "^1.19.1",
     "magnific-popup": "^1.1.0",
-    "vivus": "^0.4.5"
+    "vivus": "^0.4.5",
+    "wowjs": "^1.1.3"
   }
 }
