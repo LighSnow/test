@@ -49,15 +49,15 @@ $(function () {
 			}
 		},
 		submitHandler: function (form) {
+			$(".form__btn").hide().removeClass("shake");
+			$('.form__inner').hide();
+			$('.thanks').show();
 			$.ajax({
 				type: "POST",
 				url: "submit.php",
 				data: $(form).serialize(),
 				success: function (data) {
 					console.log(data);
-					$('.form__inner').hide();
-					$(".form__btn").hide()
-					$('.thanks').show();
 				}
 			});
 			return false;
